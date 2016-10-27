@@ -7,6 +7,7 @@
 //std
 #include <iostream>
 #include <cstdlib>
+#include <vector>
 
 //constants
 const int GAUSSIAN_BLUR_SIZE = 7;
@@ -24,7 +25,7 @@ int main(int argc, char *argv[])
     cv::Mat image; //OpenCV image object
 	int cam_id; //camera id . Associated to device number in /dev/videoX
     cv::Mat gray_image;
-    cv::vector<cv::Vec3f> circles;
+    std::vector<cv::Vec3f> circles;
     cv::Point center;
     int radius;
     
