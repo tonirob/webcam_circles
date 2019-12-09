@@ -1,0 +1,18 @@
+# webcam_circles
+Additional comment on the Hough Transform
+
+We can find information about Hough Transform in the file cicle_detector.cpp
+
+First we determine some constant data:
+
+//constants
+const double HOUGH_ACCUM_RESOLUTION = 2;
+const double HOUGH_ACCUM_TH = 70;
+
+Then, the Hough Transform allows to detect circles in an image.
+
+  //**************** Find circles in the image ****************************
+
+        //Apply the Hough Transform to find the circles
+        cv::HoughCircles( gray_image, circles, CV_HOUGH_GRADIENT, HOUGH_ACCUM_RESOLUTION, MIN_CIRCLE_DIST, CANNY_EDGE_TH, HOUGH_ACCUM_TH, MIN_RADIUS, MAX_RADIUS );
+
